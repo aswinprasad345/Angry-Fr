@@ -16,13 +16,13 @@ function preload()
 }
 
 function setup() {
-	createCanvas(600,600);
+	createCanvas(1000,600);
 
 	engine = Engine.create();
 	world = engine.world;
 	Engine.run(engine);
 
-	ground = new Ground(300,595,600,10);
+	ground = new Ground(500,595,1000,10);
 	box1 = new Box(350,500,75,75);
 	box2 = new Box(560,500,75,75);
 	log1 = new Log(450,475,300,10,PI/16);
@@ -48,7 +48,7 @@ function setup() {
 function draw() {
   background("blue");
 
-  text("Score:" + score, 300 , 100 );
+  text("Score:" + score, width-300 , 100 );
 
   ground.display();
   box1.display();
@@ -60,7 +60,9 @@ function draw() {
   log2.display();
 
   pig1.display();
+  pig1.score();
   pig2.display();
+  pig2.score();
   bird1.display();
 
   box5.display();
