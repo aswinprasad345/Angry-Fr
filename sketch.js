@@ -48,6 +48,8 @@ function setup() {
 function draw() {
   background("blue");
 
+  textSize(35);
+  fill("white");
   text("Score:" + score, width-300 , 100 );
 
   ground.display();
